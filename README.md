@@ -1,6 +1,17 @@
-<audio controls autoplay loop>
+<audio id="bgm" controls>
   <source src="bgm.mp3" type="audio/mpeg">
+  您的瀏覽器不支援音訊播放。
 </audio>
+
+<button onclick="toggleLoop()">切換循環播放</button>
+
+<script>
+  function toggleLoop() {
+    const bgm = document.getElementById("bgm");
+    bgm.loop = !bgm.loop;
+    alert("循環播放目前狀態：" + (bgm.loop ? "開啟" : "關閉"));
+  }
+</script>
 
 <!DOCTYPE html>
 <html>
